@@ -1,0 +1,4 @@
+google-cloud-aiplatform[ray]
+tabulate
+torch
+torchvision
