@@ -10,10 +10,10 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 
-import ray
-from ray import train, tune
-from ray.train.trainer import Checkpoint
-from ray.tune.schedulers import AsyncHyperBandScheduler
+import ray_experiments
+from ray_experiments import train, tune
+from ray_experiments.train.trainer import Checkpoint
+from ray_experiments.tune.schedulers import AsyncHyperBandScheduler
 
 # Change these values if you want the training to run quicker or slower.
 EPOCH_SIZE = 512
@@ -154,7 +154,7 @@ if __name__ == "__main__":
         Cluster Resource Name: {cluster_resource_name}
     """)
 
-    ray.init(address=address, runtime_env=runtime_env)
+    ray_experiments.init(address=address, runtime_env=runtime_env)
 
     # for early stopping
     sched = AsyncHyperBandScheduler()

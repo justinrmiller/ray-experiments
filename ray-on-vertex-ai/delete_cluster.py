@@ -1,6 +1,6 @@
 import argparse
 import vertex_ray
-import ray
+import ray_experiments
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description="Destroy Cluster")
@@ -26,7 +26,7 @@ if __name__=="__main__":
             cluster={args.cluster}
     """)
     
-    ray.shutdown()
+    ray_experiments.shutdown()
 
     vertex_ray.delete_ray_cluster(cluster_resource_name)
 

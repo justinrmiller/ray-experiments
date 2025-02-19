@@ -1,0 +1,13 @@
+ray==2.42.1
+
+accelerate
+
+datasets
+transformers
+
+tabulate
+
+torch
+torchvision
+
+parquet-tools
